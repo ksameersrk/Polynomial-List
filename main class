@@ -1,1 +1,47 @@
 //main class
+
+public class Client1
+{
+	public static void main(String[] args)
+	{
+		Poly1 p1 = new Poly1();
+		int[] coeff1 = { 1, 2, 3, 4};
+		int[] expo1 = { 2, 6, 4, 8};
+		p1.make(coeff1, expo1);
+		System.out.println("First Polynomial :");
+		System.out.println(p1);
+
+
+		Poly1 p2 = new Poly1();
+		int[] coeff2 = { 5, 6, 7, 8};
+		int[] expo2 = { 1, 2, 3, 4};
+		p2.make(coeff2, expo2);
+		System.out.println("Second Polynomial :");
+		System.out.println(p2);
+
+
+		Poly1 p3 = p1.add(p2);
+		System.out.println("Addition of first and second polynomial :");
+		System.out.println(p3);
+
+
+		Poly1 p4 = p1.sub(p2);
+		System.out.println("Subtraction of first and second polynomial :");
+		System.out.println(p4);
+		
+
+		Poly1 p5 = p1.mul(p2);
+		System.out.println("Multiplication of first and second polynomial :");
+		System.out.println(p5);
+
+
+		Poly1 p6a = p1.diff(p1);
+		Poly1 p6b = p2.diff(p2);
+		System.out.println("Differention of first polynomial :");
+		System.out.println(p6a);
+		System.out.println("Differention second polynomial :");
+		System.out.println(p6b);
+
+
+	}
+}
